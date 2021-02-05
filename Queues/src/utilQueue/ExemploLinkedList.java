@@ -21,6 +21,7 @@ public class ExemploLinkedList {
 
         String primeiroCliente = filaBanco.peek();
         System.out.println(primeiroCliente);
+        System.out.println(filaBanco.element());
 
 //        filaBanco.clear();
 //        String novoCliente = filaBanco.element();
