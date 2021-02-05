@@ -2,6 +2,7 @@ package List;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ExemploList {
@@ -41,6 +42,17 @@ public class ExemploList {
 
         System.out.println(nomes.isEmpty());
         System.out.println(nomes.indexOf("João"));
+        System.out.println(nomes);
+
+        for (String i: nomes){
+            System.out.println("Nome no índice " + nomes.indexOf(i) + " é: " + i);
+        }
+
+        Iterator<String> nomeIterator = nomes.iterator();
+
+        while(nomeIterator.hasNext()){
+            System.out.println("Via Iterator --> " + nomeIterator.next());
+        }
 
     }
 }
