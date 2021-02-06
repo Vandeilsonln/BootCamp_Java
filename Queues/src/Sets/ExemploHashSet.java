@@ -14,6 +14,7 @@ public class ExemploHashSet {
         notasAlunos.add(10.0);
         notasAlunos.add(5.4);
         notasAlunos.add(3.8);
+        notasAlunos.add(null);
 
         System.out.println(notasAlunos);
 
