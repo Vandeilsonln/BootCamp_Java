@@ -1,7 +1,5 @@
 package ParadigmaFuncional;
 
-import java.util.function.Function;
-
 public class FuncoesLambda {
     public static void main(String[] args){
         Funcao colocarPrefixoString = valor -> "Sr. " + valor;
@@ -9,7 +7,4 @@ public class FuncoesLambda {
     }
 }
 
-@FunctionalInterface
-interface Funcao{
-    String gerar(String valor);
-}
+
