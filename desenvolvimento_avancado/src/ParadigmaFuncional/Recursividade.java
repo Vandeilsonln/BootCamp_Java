@@ -2,7 +2,7 @@ package ParadigmaFuncional;
 
 public class Recursividade {
     public static void main(String[] args){
-        System.out.println(fatorial(10));
+        System.out.println(fatorial(7));
     }
 
     public static int fatorial(int numero){
