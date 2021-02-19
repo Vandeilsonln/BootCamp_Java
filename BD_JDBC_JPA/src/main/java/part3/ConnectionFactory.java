@@ -38,7 +38,7 @@ public class ConnectionFactory {
                 connection = DriverManager.getConnection(connectionURL, user, password);
                 System.out.println("SUCESSO ao se conectar com banco de dados");
             } catch (SQLException e){
-                System.out.println("FALHA ao se conectar com bando de dados");
+                System.out.println("FALHA ao se conectar com banco de dados");
                 e.printStackTrace();
             }
 

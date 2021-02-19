@@ -11,6 +11,7 @@ public class IngredienteDAO {
 
     // 1 - Consulta
     public List<Ingrediente> list(){
+
         List<Ingrediente> ingredientes = new ArrayList<>();
 
         try(Connection conn = ConnectionFactory.getConnection()){
@@ -27,14 +28,18 @@ public class IngredienteDAO {
                 int volume_peso = rs.getInt("volume_peso");
                 String unidade_medida = rs.getString("unidade_medida");
 
-                ingredientes.add(new Ingrediente(
+
+                Ingrediente newIngrediente = new Ingrediente(
                         id_ingrediente,
                         descricao,
                         preco,
                         volume_peso,
                         unidade_medida
-                        ));
+                        );
+
+                ingredientes.add(newIngrediente);
             }
+            System.out.println("Listagem deu certo");
         } catch (SQLException e) {
             System.out.println("Listagem de ingredientes falhou");
             e.printStackTrace();
