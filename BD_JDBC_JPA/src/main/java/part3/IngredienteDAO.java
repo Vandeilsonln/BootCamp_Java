@@ -9,6 +9,7 @@ import java.util.List;
 
 public class IngredienteDAO {
 
+    // 1 - Consulta
     public List<Ingrediente> list(){
         List<Ingrediente> ingredientes = new ArrayList<>();
 
@@ -38,6 +39,28 @@ public class IngredienteDAO {
             System.out.println("Listagem de ingredientes falhou");
             e.printStackTrace();
         }
-    return ingredientes;
+        return ingredientes;
+    }
+
+    // 1.1 - Consulta com filtro
+    public Ingrediente getById(int id_ingrediente){
+        return null;
+    }
+
+    // 2 - Inserção
+    public void create(Ingrediente ingrediente){
+
+    }
+
+    // 3 - Delete
+    public void delete(int id_ingrediente){
+
+    }
+
+    // 4 - Atualizar
+    public void update(Ingrediente ingrediente){
+
     }
 }
+
+
