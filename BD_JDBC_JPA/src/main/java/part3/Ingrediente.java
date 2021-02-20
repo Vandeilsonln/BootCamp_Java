@@ -39,5 +39,10 @@ public class Ingrediente {
     public String getUnidade_medida() {return unidade_medida;}
     public void setUnidade_medida(String unidade_medida) {this.unidade_medida=unidade_medida;}
 
-
+    @Override
+    public String toString() {
+        return "id: " + id_ingrediente + "\tdescricao: " + descricao +
+                "\tpreco: " + preco + "\tvolume_peso: " + volume_peso +
+                "\tunidade_medida: " + unidade_medida;
+    }
 }
