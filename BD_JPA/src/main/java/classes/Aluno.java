@@ -9,7 +9,7 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_aluno;
 
-    @Column(nullable = false)
+    @Column()
     private String nome;
 
     @Column(nullable = false)

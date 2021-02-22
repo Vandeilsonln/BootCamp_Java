@@ -14,12 +14,8 @@ public class Estado {
     @Column(nullable = false)
     private String nome_estado;
 
-    @OneToMany(
-            mappedBy = "estado",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-
+    @Column
+    @ElementCollection(targetClass = Aluno.class)
     private List<Aluno> alunos = new ArrayList<>();
 
     // Contrutor

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="part1-DIO">
+
+        <description> Unidade de persistencia da parte 1 do tutorial basico de JPA SEM IMPLEMENTACOES</description>
+
+        <class>classes.Aluno</class>
+        <class>classes.Estado</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/db_vandeilson"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        </properties>
+
+    </persistence-unit>
+
+    <!-- Configurações do banco de dados com Hibernate -->
+    <persistence-unit name="part2-DIO">
+
+        <description> Unidade de persistencia da parte 2 do tutorial basico de JPA COM HIBERNATE</description>
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Classes (entidades) que serão mapeadas -->
+        <class>classes.Aluno</class>
+        <class>classes.Estado</class>
+
+
+        <!-- Configuração da conexão com o banco de dados -->
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/db_vandeilson"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+        <!-- Configurações do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
