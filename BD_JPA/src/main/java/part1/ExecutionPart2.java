@@ -41,6 +41,15 @@ public class ExecutionPart2 {
 
         entityManager.getTransaction().commit();
 
+        // 5 - Remover uma entidade
+        entityManager.getTransaction().begin();
+
+        entityManager.remove(alunoEncontrado);
+
+        entityManager.getTransaction().commit();
+
+        // Fechando o Entity Manager
+
         entityManager.close();
         entityManagerFactory.close();
     }
