@@ -9,13 +9,13 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_aluno;
 
-    @Column()
+    @Column
     private String nome;
 
     @Column(nullable = false)
     private int idade;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Estado id_estado;
 
     // Construtores
